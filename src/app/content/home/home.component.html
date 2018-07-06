@@ -1,0 +1,523 @@
+
+<div class="row">
+  <div class="col"></div>
+  <div class="col">
+    <main class="text-center py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h3 align="center">Quelques exemples de jeux :</h3>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <div class="col"></div>
+</div>
+
+
+
+<!-- Card deck -->
+<!--<div  class="row">-->
+<!--<div class="col">-->
+<!--<div class="card mb-4" style="margin: auto;">-->
+<!--<div class="view overlay">-->
+<!--<img style="max-height:300px;" class="card-img-top" src="http://wi-play.com/vids/ow.jpg" alt="Card image cap">-->
+<!--<a href="#!">-->
+<!--<div class="mask rgba-white-slight"></div>-->
+<!--</a>-->
+<!--</div>-->
+<!--<div class="card-body">-->
+<!--<h4 class="card-title">Overwatch</h4>-->
+<!--<p class="card-text">Vous cherche une team pour jouer librement votre Symmetra ou votre Bastion ? <span-->
+<!--class="you">VOUS</span> êtes au bon endroit.</p>-->
+<!--<div class="d-flex justify-content-center align-bottom">-->
+<!--<button  type="button" class="btn danger-color-dark btn-md waves-light">En savoir plus</button>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="col">-->
+<!--<div class="card mb-4" style="margin: auto;">-->
+<!--<div class="view overlay">-->
+<!--<img style="max-height:300px;" class="card-img-top" src="http://wi-play.com/vids/lol.jpg" alt="Card image cap">-->
+<!--<a href="#!">-->
+<!--<div class="mask rgba-white-slight"></div>-->
+<!--</a>-->
+<!--</div>-->
+<!--<div class="card-body">-->
+<!--<h4 class="card-title">League of Legends</h4>-->
+<!--<p class="card-text">Envie de tryhard ? Jouer seul c'est bien, à plusieurs, c'est mieux ! Trouvez la team qui <span class="you">VOUS</span>-->
+<!--plait.</p>-->
+<!--<div class="d-flex justify-content-center align-bottom">-->
+<!--<button type="button" class="btn danger-color-dark btn-md waves-light">En savoir plus</button>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="col">-->
+<!--<div class="card mb-4" style="margin: auto;">-->
+<!--<div class="view overlay">-->
+<!--<img style="max-height:300px;" class="card-img-top" src="http://wi-play.com/vids/wow.jpg" alt="Card image cap">-->
+<!--<a href="#!">-->
+<!--<div class="mask rgba-white-slight"></div>-->
+<!--</a>-->
+<!--</div>-->
+<!--<div class="card-body">-->
+<!--<h4 class="card-title">World of Warcraft</h4>-->
+<!--<p class="card-text">De nombreuses guildes sont à la recherche de joueurs, cherchez celle qui <span class="you">VOUS</span>-->
+<!--correspond le mieux.</p>-->
+<!--<div class="d-flex justify-content-center align-bottom">-->
+<!--<button type="button" class="btn danger-color-dark btn-md waves-light">En savoir plus</button>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+
+<div class="row">
+
+  <!--Rotating card-->
+  <div class="col-md-4">
+    <mdb-card-rotating #cards>
+      <!--Front Side-->
+      <div class="face front tp-box_side tp-box_front">
+
+        <!-- Image-->
+        <div class="card-up">
+          <img style="max-height:300px;" class="card-img-top" src="http://wi-play.com/vids/ow.jpg" alt="Card image cap">
+        </div>
+        <!--Avatar-->
+        <div class="avatar">
+          <img src="http://wi-play.com/vids/ow-logo.png" class="rounded-circle img-responsive">
+        </div>
+        <!--Content-->
+        <div class="card-body">
+          <h4 class="card-title">Overwatch</h4>
+          <p class="card-text">Vous cherche une team pour jouer librement votre Symmetra ou votre Bastion ? <span
+            class="you">VOUS</span> êtes au bon endroit.</p>
+          <div class="d-flex justify-content-center align-bottom">
+            <button  type="button"
+                     class="btn danger-color-dark btn-md waves-light"
+                     data-card="card-1"
+                     (click)="cards.toggle()">En savoir plus</button>
+          </div>
+        </div>
+      </div>
+      <!--/.Front Side-->
+
+      <!--Back Side-->
+      <div class="back tp-box_side tp-box_back">
+
+        <!--Content-->
+        <h4>OVERWATCH</h4>
+        <hr>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime quae, dolores dicta. Blanditiis rem amet repellat,
+          dolores nihil quae in mollitia asperiores ut rerum repellendus, voluptatum eum, officia laudantium quaerat?</p>
+        <hr>
+        <!--Social Icons-->
+        <ul class="list-inline">
+          <li class="list-inline-item">
+            <a class="icons-sm fb-ic">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a class="icons-sm tw-ic">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a class="icons-sm gplus-ic">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a class="icons-sm li-ic">
+              <i class="fa fa-linkedin"></i>
+            </a>
+          </li>
+        </ul>
+        <!--Triggering button-->
+        <a class="rotate-btn" data-card="card-1" (click)="cards.toggle()">
+          <i class="fa fa-undo"></i> Click here to rotate back</a>
+
+      </div>
+      <!--/.Back Side-->
+    </mdb-card-rotating>
+  </div>
+  <!--/.Rotating card-->
+
+
+  <!--Rotating card-->
+  <div class="col-md-4">
+    <mdb-card-rotating #cards2>
+      <!--Front Side-->
+      <div class="face front tp-box_side tp-box_front">
+
+        <!-- Image-->
+        <div class="card-up">
+          <img style="max-height:300px;" class="card-img-top" src="http://wi-play.com/vids/lol.jpg" alt="Card image cap">
+        </div>
+        <!--Avatar-->
+        <div class="avatar">
+          <img src="http://wi-play.com/vids/lol-logo2.png" class="rounded-circle img-responsive">
+        </div>
+        <!--Content-->
+        <div class="card-body">
+          <h4 class="card-title">League of Legends</h4>
+          <p class="card-text">Envie de tryhard ? Jouer seul c'est bien, à plusieurs, c'est mieux ! Trouvez la team qui <span class="you">VOUS</span>
+            plait.</p>
+          <div class="d-flex justify-content-center">
+            <button type="button"
+                    class="btn danger-color-dark btn-md waves-light"
+                    data-card="card-2"
+                    (click)="cards2.toggle()">En savoir plus</button>
+          </div>
+        </div>
+      </div>
+      <!--/.Front Side-->
+
+      <!--Back Side-->
+      <div class="back tp-box_side tp-box_back">
+
+        <!--Content-->
+        <h4>LEAGUE OF LEGENDS</h4>
+        <hr>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime quae, dolores dicta. Blanditiis rem amet repellat,
+          dolores nihil quae in mollitia asperiores ut rerum repellendus, voluptatum eum, officia laudantium quaerat?</p>
+        <hr>
+        <!--Social Icons-->
+        <ul class="list-inline">
+          <li class="list-inline-item">
+            <a class="icons-sm fb-ic">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a class="icons-sm tw-ic">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a class="icons-sm gplus-ic">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a class="icons-sm li-ic">
+              <i class="fa fa-linkedin"></i>
+            </a>
+          </li>
+        </ul>
+        <!--Triggering button-->
+        <a class="rotate-btn" data-card="card-1" (click)="cards2.toggle()">
+          <i class="fa fa-undo"></i> Click here to rotate back</a>
+
+      </div>
+      <!--/.Back Side-->
+    </mdb-card-rotating>
+  </div>
+  <!--/.Rotating card-->
+
+
+  <!--Rotating card-->
+  <div class="col-md-4">
+    <mdb-card-rotating #cards3>
+      <!--Front Side-->
+      <div class="face front tp-box_side tp-box_front">
+
+        <!-- Image-->
+        <div class="card-up">
+          <img style="max-height:300px;" class="card-img-top" src="http://wi-play.com/vids/wow.jpg" alt="Card image cap">
+        </div>
+        <!--Avatar-->
+        <div class="avatar">
+          <img src="http://wi-play.com/vids/wow-logo2.png" class="rounded-circle img-responsive">
+        </div>
+        <!--Content-->
+        <div class="card-body">
+          <h4 class="card-title">World of Warcraft</h4>
+          <p class="card-text">De nombreuses guildes sont à la recherche de joueurs, cherchez celle qui <span class="you">VOUS</span>
+            correspond le mieux.</p>
+          <div class="d-flex justify-content-center">
+            <button type="button"
+                    class="btn danger-color-dark btn-md waves-light"
+                    data-card="card-3"
+                    (click)="cards3.toggle()">En savoir plus</button>
+          </div>
+        </div>
+      </div>
+      <!--/.Front Side-->
+
+      <!--Back Side-->
+      <div class="back tp-box_side tp-box_back">
+
+        <!--Content-->
+        <h4>WORLD OF WARCRAFT</h4>
+        <hr>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime quae, dolores dicta. Blanditiis rem amet repellat,
+          dolores nihil quae in mollitia asperiores ut rerum repellendus, voluptatum eum, officia laudantium quaerat?</p>
+        <hr>
+        <!--Social Icons-->
+        <ul class="list-inline">
+          <li class="list-inline-item">
+            <a class="icons-sm fb-ic">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a class="icons-sm tw-ic">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a class="icons-sm gplus-ic">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a class="icons-sm li-ic">
+              <i class="fa fa-linkedin"></i>
+            </a>
+          </li>
+        </ul>
+        <!--Triggering button-->
+        <a class="rotate-btn" data-card="card-1" (click)="cards3.toggle()">
+          <i class="fa fa-undo"></i> Click here to rotate back</a>
+
+      </div>
+      <!--/.Back Side-->
+    </mdb-card-rotating>
+  </div>
+  <!--/.Rotating card-->
+
+</div>
+
+<div *ngIf="!bNewCards" class="d-flex justify-content-center">
+  <a (click)="test.toggle()"
+     class="btn-floating danger-color-dark waves-light" mdbWavesEffect><i class="fa fa-plus"></i></a>
+</div>
+
+<div class=""
+     [mdbCollapse]="isCollapsed"
+     #test="bs-collapse">
+  <div class="row">
+
+    <!--Rotating card-->
+    <div class="col-md-4">
+      <mdb-card-rotating #cards4>
+        <!--Front Side-->
+        <div class="face front tp-box_side tp-box_front">
+
+          <!-- Image-->
+          <div class="card-up">
+            <img style="max-height:300px;" class="card-img-top" src="http://wi-play.com/vids/ow.jpg" alt="Card image cap">
+          </div>
+          <!--Avatar-->
+          <div class="avatar">
+            <img src="http://wi-play.com/vids/ow-logo.png" class="rounded-circle img-responsive">
+          </div>
+          <!--Content-->
+          <div class="card-body">
+            <h4 class="card-title">Overwatch</h4>
+            <p class="card-text">Vous cherche une team pour jouer librement votre Symmetra ou votre Bastion ? <span
+              class="you">VOUS</span> êtes au bon endroit.</p>
+            <div class="d-flex justify-content-center align-bottom">
+              <button  type="button"
+                       class="btn danger-color-dark btn-md waves-light"
+                       data-card="card-4"
+                       (click)="cards4.toggle()">En savoir plus</button>
+            </div>
+          </div>
+        </div>
+        <!--/.Front Side-->
+
+        <!--Back Side-->
+        <div class="back tp-box_side tp-box_back">
+
+          <!--Content-->
+          <h4>OVERWATCH</h4>
+          <hr>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime quae, dolores dicta. Blanditiis rem amet repellat,
+            dolores nihil quae in mollitia asperiores ut rerum repellendus, voluptatum eum, officia laudantium quaerat?</p>
+          <hr>
+          <!--Social Icons-->
+          <ul class="list-inline">
+            <li class="list-inline-item">
+              <a class="icons-sm fb-ic">
+                <i class="fa fa-facebook"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a class="icons-sm tw-ic">
+                <i class="fa fa-twitter"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a class="icons-sm gplus-ic">
+                <i class="fa fa-google-plus"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a class="icons-sm li-ic">
+                <i class="fa fa-linkedin"></i>
+              </a>
+            </li>
+          </ul>
+          <!--Triggering button-->
+          <a class="rotate-btn" data-card="card-4" (click)="cards4.toggle()">
+            <i class="fa fa-undo"></i> Click here to rotate back</a>
+
+        </div>
+        <!--/.Back Side-->
+      </mdb-card-rotating>
+    </div>
+    <!--/.Rotating card-->
+
+
+    <!--Rotating card-->
+    <div class="col-md-4">
+      <mdb-card-rotating #cards5>
+        <!--Front Side-->
+        <div class="face front tp-box_side tp-box_front">
+
+          <!-- Image-->
+          <div class="card-up">
+            <img style="max-height:300px;" class="card-img-top" src="http://wi-play.com/vids/lol.jpg" alt="Card image cap">
+          </div>
+          <!--Avatar-->
+          <div class="avatar">
+            <img src="http://wi-play.com/vids/lol-logo2.png" class="rounded-circle img-responsive">
+          </div>
+          <!--Content-->
+          <div class="card-body">
+            <h4 class="card-title">League of Legends</h4>
+            <p class="card-text">Envie de tryhard ? Jouer seul c'est bien, à plusieurs, c'est mieux ! Trouvez la team qui <span class="you">VOUS</span>
+              plait.</p>
+            <div class="d-flex justify-content-center">
+              <button type="button"
+                      class="btn danger-color-dark btn-md waves-light"
+                      data-card="card-5"
+                      (click)="cards5.toggle()">En savoir plus</button>
+            </div>
+          </div>
+        </div>
+        <!--/.Front Side-->
+
+        <!--Back Side-->
+        <div class="back tp-box_side tp-box_back">
+
+          <!--Content-->
+          <h4>LEAGUE OF LEGENDS</h4>
+          <hr>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime quae, dolores dicta. Blanditiis rem amet repellat,
+            dolores nihil quae in mollitia asperiores ut rerum repellendus, voluptatum eum, officia laudantium quaerat?</p>
+          <hr>
+          <!--Social Icons-->
+          <ul class="list-inline">
+            <li class="list-inline-item">
+              <a class="icons-sm fb-ic">
+                <i class="fa fa-facebook"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a class="icons-sm tw-ic">
+                <i class="fa fa-twitter"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a class="icons-sm gplus-ic">
+                <i class="fa fa-google-plus"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a class="icons-sm li-ic">
+                <i class="fa fa-linkedin"></i>
+              </a>
+            </li>
+          </ul>
+          <!--Triggering button-->
+          <a class="rotate-btn" data-card="card-5" (click)="cards5.toggle()">
+            <i class="fa fa-undo"></i> Click here to rotate back</a>
+
+        </div>
+        <!--/.Back Side-->
+      </mdb-card-rotating>
+    </div>
+    <!--/.Rotating card-->
+
+
+    <!--Rotating card-->
+    <div class="col-md-4">
+      <mdb-card-rotating #cards6>
+        <!--Front Side-->
+        <div class="face front tp-box_side tp-box_front">
+
+          <!-- Image-->
+          <div class="card-up">
+            <img style="max-height:300px;" class="card-img-top" src="http://wi-play.com/vids/wow.jpg" alt="Card image cap">
+          </div>
+          <!--Avatar-->
+          <div class="avatar">
+            <img src="http://wi-play.com/vids/wow-logo2.png" class="rounded-circle img-responsive">
+          </div>
+          <!--Content-->
+          <div class="card-body">
+            <h4 class="card-title">World of Warcraft</h4>
+            <p class="card-text">De nombreuses guildes sont à la recherche de joueurs, cherchez celle qui <span class="you">VOUS</span>
+              correspond le mieux.</p>
+            <div class="d-flex justify-content-center">
+              <button type="button"
+                      class="btn danger-color-dark btn-md waves-light"
+                      data-card="card-6"
+                      (click)="cards6.toggle()">En savoir plus</button>
+            </div>
+          </div>
+        </div>
+        <!--/.Front Side-->
+
+        <!--Back Side-->
+        <div class="back tp-box_side tp-box_back">
+
+          <!--Content-->
+          <h4>WORLD OF WARCRAFT</h4>
+          <hr>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime quae, dolores dicta. Blanditiis rem amet repellat,
+            dolores nihil quae in mollitia asperiores ut rerum repellendus, voluptatum eum, officia laudantium quaerat?</p>
+          <hr>
+          <!--Social Icons-->
+          <ul class="list-inline">
+            <li class="list-inline-item">
+              <a class="icons-sm fb-ic">
+                <i class="fa fa-facebook"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a class="icons-sm tw-ic">
+                <i class="fa fa-twitter"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a class="icons-sm gplus-ic">
+                <i class="fa fa-google-plus"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a class="icons-sm li-ic">
+                <i class="fa fa-linkedin"></i>
+              </a>
+            </li>
+          </ul>
+          <!--Triggering button-->
+          <a class="rotate-btn" data-card="card-6" (click)="cards6.toggle()">
+            <i class="fa fa-undo"></i> Click here to rotate back</a>
+
+        </div>
+        <!--/.Back Side-->
+      </mdb-card-rotating>
+    </div>
+    <!--/.Rotating card-->
+
+  </div>
+</div>

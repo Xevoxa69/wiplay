@@ -29,9 +29,27 @@
               }
             ],
             "styles": [
-              "src/styles.scss"
+              {
+                "input": "node_modules/font-awesome/scss/font-awesome.scss"
+              },
+              {
+                "input": "ng-uikit-pro-standard/assets/scss/bootstrap/bootstrap.scss"
+              },
+              {
+                "input": "ng-uikit-pro-standard/assets/scss/mdb.scss"
+              },
+              {
+                "input": "src/styles.scss"
+              }
             ],
-            "scripts": []
+            "scripts": [
+              {
+                "input": "node_modules/chart.js/dist/Chart.js"
+              },
+              {
+                "input": "node_modules/hammerjs/hammer.min.js"
+              }
+            ]
           },
           "configurations": {
             "production": {

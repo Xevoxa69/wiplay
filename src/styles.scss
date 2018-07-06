@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+  font-family: 'Roboto', sans-serif;
+  text-decoration: none;
+}
+
+*::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
