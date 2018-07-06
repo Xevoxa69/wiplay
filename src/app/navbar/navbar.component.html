@@ -1,0 +1,223 @@
+<header>
+  <mdb-sidenav #sidenav
+               class="sn-1"
+               [fixed]="false">
+
+    <logo>
+      <li>
+        <div class="logo-wrapper waves-light">
+          <a href="#">
+            <img src="http://wi-play.com/vids/wiplay-transparent.png" class="img-fluid flex-center">
+          </a>
+        </div>
+      </li>
+      <!--/. Logo -->
+    </logo>
+
+    <links>
+      <!--Social-->
+      <li>
+        <ul class="social">
+          <li>
+            <a class="icons-sm fb-ic"
+               href="https://facebook.com"
+               target="_blank">
+              <i class="fa fa-facebook"> </i>
+            </a>
+          </li>
+          <li>
+            <a class="icons-sm pin-ic"
+               href="https://instagram.com"
+               target="_blank">
+              <i class="fa fa-instagram"> </i>
+            </a>
+          </li>
+          <li>
+            <a class="icons-sm gplus-ic"
+               href="https://plus.google.com"
+               target="_blank">
+              <i class="fa fa-google-plus"> </i>
+            </a>
+          </li>
+          <li>
+            <a class="icons-sm tw-ic"
+               href="https://twitter.com"
+               target="_blank">
+              <i class="fa fa-twitter"> </i>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <!--/Social-->
+      <!--Search Form-->
+      <li>
+        <form class="search-form"
+              role="search">
+          <div class="form-group md-form mt-0 pt-1 waves-light"
+               mdbWavesEffect>
+            <input type="text"
+                   class="form-control"
+                   placeholder="Search">
+          </div>
+        </form>
+      </li>
+      <!--/.Search Form-->
+      <!-- Side navigation links -->
+      <li>
+        <ul class="collapsible collapsible-accordion">
+          <mdb-squeezebox [multiple]="false"
+                          aria-multiselectable="false">
+
+            <!-- Collapsible link -->
+            <mdb-item>
+              <mdb-item-head mdbWavesEffect>
+                <i class="fa fa-chevron-right"></i> Collapsible menu
+              </mdb-item-head>
+              <mdb-item-body>
+                <ul>
+                  <li>
+                    <a href="#"
+                       class="waves-effect"
+                       mdbWavesEffect>Link 1</a>
+                  </li>
+                  <li>
+                    <a href="#"
+                       class="waves-effect"
+                       mdbWavesEffect>Link 2</a>
+                  </li>
+                </ul>
+              </mdb-item-body>
+            </mdb-item>
+
+            <!-- Simple link -->
+            <mdb-item class="no-collase">
+              <mdb-item-head mdbWavesEffect>
+                <i class="fa fa-hand-pointer-o"></i> Simple link
+              </mdb-item-head>
+              <mdb-item-body></mdb-item-body>
+            </mdb-item>
+
+            <!-- Collapsible link -->
+            <mdb-item>
+              <mdb-item-head mdbWavesEffect>
+                <i class="fa fa-eye"></i> Collapsible menu 2
+              </mdb-item-head>
+              <mdb-item-body>
+                <ul>
+                  <li>
+                    <a href="#"
+                       class="waves-effect"
+                       mdbWavesEffect>Link 1</a>
+                  </li>
+                  <li>
+                    <a href="#"
+                       class="waves-effect"
+                       mdbWavesEffect>Link 2</a>
+                  </li>
+                </ul>
+              </mdb-item-body>
+            </mdb-item>
+
+            <!-- Simple link -->
+            <mdb-item class="no-collase">
+              <mdb-item-head mdbWavesEffect>
+                <i class="fa fa-diamond"></i> Simple link 2
+              </mdb-item-head>
+              <mdb-item-body></mdb-item-body>
+            </mdb-item>
+
+          </mdb-squeezebox>
+        </ul>
+      </li>
+      <!--/. Side navigation links -->
+    </links>
+    <div class="sidenav-bg mask-strong"></div>
+  </mdb-sidenav>
+  <mdb-navbar
+    SideClass="navbar fixed-top navbar-expand-lg elegant-color-dark navbar-expand-lg scrolling-navbar double-nav"
+    [containerInside]="false">
+
+
+    <navlinks class="navbar-container">
+      <!-- SideNav slide-out button -->
+      <div class="float-left" style="padding-right: 20px;" *ngIf="bSideNav && bDashboard">
+        <a (click)="sidenav.show()"
+           class="button-collapse hidden-nav-button-collapse">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+    </navlinks>
+    <!--/. SideNav slide-out button -->
+
+    <logo>
+      <!-- Breadcrumb-->
+      <div class="breadcrumbs breadcrumbs-hidden-nav breadcrumb-dn mr-auto">
+        <a routerLink="/home"
+           class="logo navbar-brand"><strong class="point">WI</strong><span class="point">.</span>Play</a>
+        <navlinks>
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active waves-light"
+                mdbWavesEffect>
+              <a href="#!"
+                 class="nav-link">Accueil<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item waves-light"
+                mdbWavesEffect>
+              <a href="#!"
+                 class="nav-link">Rechercher</a>
+            </li>
+            <li class="nav-item waves-light"
+                mdbWavesEffect>
+              <a href="#!"
+                 class="nav-link">Evennements</a>
+            </li>
+            <li class="nav-item waves-light"
+                mdbWavesEffect>
+              <a class="nav-link"
+                 routerLinkActive="active"
+                 routerLink="/register">Dashboard</a>
+            </li>
+          </ul>
+        </navlinks>
+      </div>
+      <!--/. Breadcrumb-->
+    </logo>
+
+    <navlinks>
+      <!-- TODO: test -->
+      <ul class="nav navbar-nav nav-flex-icons ml-auto">
+        <li style="margin-right: 20px;"
+            class="nav-item dropdown" dropdown>
+          <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
+            <i class="fa fa-user"></i>
+            Connexion<span class="caret"></span></a>
+          <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
+            <form>
+              <div class="form-group">
+                <label for="exampleDropdownFormEmail1">Email address</label>
+                <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com">
+              </div>
+              <div class="form-group">
+                <label for="exampleDropdownFormPassword1">Password</label>
+                <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password">
+              </div>
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="dropdownCheck">
+                <label class="form-check-label" for="dropdownCheck">
+                  Remember me
+                </label>
+              </div>
+              <button type="submit" class="btn danger-color-dark">Sign in</button>
+            </form>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">New around here? Sign up</a>
+            <a class="dropdown-item" href="#">Forgot password?</a>
+          </div>
+        </li>
+      </ul>
+
+    </navlinks>
+  </mdb-navbar>
+  <!--/. Navbar -->
+</header>
+<!--/.Double navigation-->
